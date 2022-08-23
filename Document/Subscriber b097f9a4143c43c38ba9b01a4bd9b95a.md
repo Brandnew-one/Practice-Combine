@@ -39,7 +39,7 @@ public protocol Subscriber : CustomCombineIdentifierConvertible {
 
 `Publisher에서는 Output, Failure 타입이 있었는데 해당 Publisher에서 방출되는 값을 구독하기 위해서는 Subscriber의 Intput, Failure타입이 일치해야하는 것을 의미!`
 
-![스크린샷 2022-08-23 오후 9.43.47.png](Subscriber%20b097f9a4143c43c38ba9b01a4bd9b95a/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2022-08-23_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.43.47.png)
+<img width="478" alt="%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-23_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_9 43 47" src="https://user-images.githubusercontent.com/88618825/186192217-7e2fa593-6174-42a3-a714-d3be5a915221.png">
 
  
 
