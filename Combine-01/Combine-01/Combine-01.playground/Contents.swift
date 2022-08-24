@@ -5,6 +5,7 @@ import Foundation
 var cancellables = Set<AnyCancellable>()
 
 // MARK: - Just
+print("--------Just---------")
 let justPublisher = Just(["Bran", "JD-Man"])
 justPublisher
   .sink(
@@ -18,6 +19,7 @@ justPublisher
 print("-----------------")
 
 // MARK: - Future
+print("------Future------")
 let futurePublisher = Future<String, Never> { promise in
   promise(.success("Bran"))
   promise(.success("JD-Man"))
@@ -34,6 +36,7 @@ futurePublisher
 print("-----------------")
 
 // MARK: - Empty
+print("--------Empty---------")
 let emptyPublisher = Empty<String, Never>()
 emptyPublisher
   .sink(
@@ -47,6 +50,7 @@ emptyPublisher
 print("-----------------")
 
 // MARK: - Fail
+print("--------Fail---------")
 enum CustomError: Error {
   case `default`
 }
@@ -64,6 +68,7 @@ failPublisher
 print("-----------------")
 
 // MARK: - Sequence
+print("-------Sequence---------")
 let sequencePublisher1 = Publishers.Sequence<[String], Never>(sequence: ["Bran", "JD-Man"])
 
 sequencePublisher1
@@ -77,6 +82,7 @@ sequencePublisher1
   ).store(in: &cancellables)
 print("-----------------")
 
+print("--------Sequence2---------")
 let sequencePublisher2 = ["Bran", "JD-Man"].publisher
 sequencePublisher2
   .sink(
@@ -101,6 +107,7 @@ sequencePublisher2
 print("-----------------")
 
 // MARK: - record
+print("--------Record---------")
 let recordPublisher = Record<String, Never>(output: ["Bran", "JD-Man"], completion: .finished)
 recordPublisher
   .sink(
@@ -115,6 +122,7 @@ print("-----------------")
 
 
 // MARK: - deferred
+print("--------Deferred---------")
 let deferredPublisher = Deferred { Just(Void()) }
 
 deferredPublisher

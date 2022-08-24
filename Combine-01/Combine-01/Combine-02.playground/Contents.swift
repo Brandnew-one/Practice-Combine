@@ -5,6 +5,7 @@ var cancellables = Set<AnyCancellable>()
 
 // MARK: - sink를 통해 구독
 let sinkPublisher = ["삑두", "마늘맨", "코코종"].publisher
+sinkPublisher
   .sink(
     receiveCompletion: {
       print("Completion", $0)
@@ -13,6 +14,7 @@ let sinkPublisher = ["삑두", "마늘맨", "코코종"].publisher
       print("Received Value is", $0)
     }
   ).store(in: &cancellables)
+print("---------------")
 
 // MARK: - assign을 통해 구독
 class SomeObject {
