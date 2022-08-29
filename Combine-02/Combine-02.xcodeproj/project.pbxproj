@@ -20,6 +20,7 @@
 		65F9DAC928BCE045006DE28D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65F9DACC28BCE045006DE28D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		65F9DAD328BCE07E006DE28D /* Subject.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Subject.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		65F9DAD428BCEC23006DE28D /* Filtering Operator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Filtering Operator.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 		65F9DAB928BCE044006DE28D = {
 			isa = PBXGroup;
 			children = (
+				65F9DAD428BCEC23006DE28D /* Filtering Operator.playground */,
 				65F9DAD328BCE07E006DE28D /* Subject.playground */,
 				65F9DAC428BCE044006DE28D /* Combine-02 */,
 				65F9DAC328BCE044006DE28D /* Products */,
