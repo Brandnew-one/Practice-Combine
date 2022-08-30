@@ -11,7 +11,7 @@ import SwiftUI
 struct Signup_ExApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      SignupView()
     }
   }
 }
