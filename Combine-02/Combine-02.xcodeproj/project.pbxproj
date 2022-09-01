@@ -14,6 +14,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65E5FFC928C10314001D374B /* Combining Operator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Combining Operator.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		65E5FFCA28C10334001D374B /* Transforming Operator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Transforming Operator.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		65F9DAC228BCE044006DE28D /* Combine-02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Combine-02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F9DAC528BCE044006DE28D /* Combine_02App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combine_02App.swift; sourceTree = "<group>"; };
 		65F9DAC728BCE044006DE28D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 		65F9DAB928BCE044006DE28D = {
 			isa = PBXGroup;
 			children = (
+				65E5FFCA28C10334001D374B /* Transforming Operator.playground */,
+				65E5FFC928C10314001D374B /* Combining Operator.playground */,
 				65F9DAD428BCEC23006DE28D /* Filtering Operator.playground */,
 				65F9DAD328BCE07E006DE28D /* Subject.playground */,
 				65F9DAC428BCE044006DE28D /* Combine-02 */,
