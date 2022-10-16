@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct WelcomeView: View {
-//  @Environment(\.presentationMode)
-//  var presentationMode
-
   @Binding
   var isShow: Bool
 

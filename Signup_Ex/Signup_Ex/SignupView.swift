@@ -47,6 +47,7 @@ struct SignupView: View {
     }
     .fullScreenCover(isPresented: $viewModel.pageSheetShow) {
       WelcomeView(isShow: $viewModel.pageSheetShow)
+        .interactiveDismissDisabled(true)
     }
   }
 }
