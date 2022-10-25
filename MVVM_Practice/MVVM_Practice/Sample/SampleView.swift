@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct SampleView: View {
+struct SampleView: ViewType {
+  @StateObject
+  var viewModel = SampleViewModel()
+
   var body: some View {
     VStack(spacing: 30) {
       userButtonInputSection
@@ -25,18 +28,18 @@ extension SampleView {
 
       HStack(spacing: 18) {
         Button(
-          action: {},
+          action: { viewModel.action(.minusButtonTapped) },
           label: {
             Text("-")
               .font(.title)
           }
         )
 
-        Text("12")
+        Text("\(viewModel.output.resultNumber)")
           .font(.largeTitle)
 
         Button(
-          action: {},
+          action: { viewModel.action(.plusButtonTapped) },
           label: {
             Text("+")
               .font(.title)
