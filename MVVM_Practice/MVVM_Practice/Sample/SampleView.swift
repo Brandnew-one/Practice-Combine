@@ -56,11 +56,12 @@ extension SampleView {
       Text("This is Keyboard Action")
         .font(.title)
 
-      TextField("Enter Anything", text: .constant(""))
+      TextField("Enter Anything", text: $viewModel.input.textFieldString)
         .textFieldStyle(.roundedBorder)
         .frame(width: 300)
 
-      Text("Anything")
+
+      Text(viewModel.output.resultText)
     }
     .padding()
     .border(.black, width: 2)
