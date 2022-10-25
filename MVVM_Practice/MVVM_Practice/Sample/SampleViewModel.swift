@@ -10,9 +10,10 @@ import Foundation
 
 final class SampleViewModel: ViewModelType {
   struct Input {
-    let minusButton = PassthroughSubject<Void, Never>()
-    let plusButton = PassthroughSubject<Void, Never>()
-    let textFieldStringSubject = PassthroughSubject<String, Never>()
+    fileprivate let minusButtonSubject = PassthroughSubject<Void, Never>()
+    fileprivate let plusButtonSubject = PassthroughSubject<Void, Never>()
+    fileprivate let textFieldStringSubject = PassthroughSubject<String, Never>()
+
     var textFieldString: String = "" {
       didSet { textFieldStringSubject.send(textFieldString) }
     }
@@ -35,9 +36,9 @@ final class SampleViewModel: ViewModelType {
   func action(_ action: Action) {
     switch action {
     case .minusButtonTapped:
-      input.minusButton.send()
+      input.minusButtonSubject.send()
     case .plusButtonTapped:
-      input.plusButton.send()
+      input.plusButtonSubject.send()
     case .textdidChanged(let text):
       input.textFieldStringSubject.send(text)
     }
@@ -52,13 +53,13 @@ final class SampleViewModel: ViewModelType {
   }
 
   func transform() {
-    input.minusButton
+    input.minusButtonSubject
       .throttle(for: 0.1, scheduler: RunLoop.main, latest: false)
       .sink(receiveValue: {
         self.output.resultNumber -= 1
       }).store(in: &cancellables)
 
-    input.plusButton
+    input.plusButtonSubject
       .throttle(for: 0.1, scheduler: RunLoop.main, latest: false)
       .sink(receiveValue: {
         self.output.resultNumber += 1
