@@ -12,26 +12,14 @@ final class SampleViewModel: ViewModelType {
   struct Input {
     fileprivate let minusButtonSubject = PassthroughSubject<Void, Never>()
     fileprivate let plusButtonSubject = PassthroughSubject<Void, Never>()
-    fileprivate let textFieldStringSubject = PassthroughSubject<String, Never>()
 
-    var textFieldString: String = "" {
-      didSet { textFieldStringSubject.send(textFieldString) }
-    }
+    var textFieldInput = BindingSubject<String>(value: "")
   }
 
   enum Action {
     case minusButtonTapped
     case plusButtonTapped
-    case textdidChanged(text: String)
   }
-
-  struct Output {
-    var resultNumber: Int = 0
-    var resultText: String = ""
-  }
-
-  // MARK: - @Published 적용 시키고, Binding<String> 자체를 input으로 넣는건 어떨까?
-  var input: Input = Input()
 
   func action(_ action: Action) {
     switch action {
@@ -39,10 +27,15 @@ final class SampleViewModel: ViewModelType {
       input.minusButtonSubject.send()
     case .plusButtonTapped:
       input.plusButtonSubject.send()
-    case .textdidChanged(let text):
-      input.textFieldStringSubject.send(text)
     }
   }
+
+  struct Output {
+    var resultNumber: Int = 0
+    var resultText: String = ""
+  }
+
+  var input: Input = Input()
 
   @Published private(set) var output: Output = Output()
 
@@ -65,11 +58,10 @@ final class SampleViewModel: ViewModelType {
         self.output.resultNumber += 1
       }).store(in: &cancellables)
 
-    input.textFieldStringSubject
-      .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+    input.textFieldInput.subject
+      .debounce(for: 0.1, scheduler: RunLoop.main)
       .sink(receiveValue: {
         self.output.resultText = $0
       }).store(in: &cancellables)
   }
-
 }

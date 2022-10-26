@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		653865BC2909734100A5BC3A /* BindingSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653865BB2909734100A5BC3A /* BindingSubject.swift */; };
 		6590354F290823B100D37A1B /* MVVM_PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590354E290823B100D37A1B /* MVVM_PracticeApp.swift */; };
 		65903553290823B200D37A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65903552290823B200D37A1B /* Assets.xcassets */; };
 		65903556290823B200D37A1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65903555290823B200D37A1B /* Preview Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		653865BB2909734100A5BC3A /* BindingSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingSubject.swift; sourceTree = "<group>"; };
 		6590354B290823B100D37A1B /* MVVM_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6590354E290823B100D37A1B /* MVVM_PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_PracticeApp.swift; sourceTree = "<group>"; };
 		65903552290823B200D37A1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		6590354D290823B100D37A1B /* MVVM_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				653865BB2909734100A5BC3A /* BindingSubject.swift */,
 				659035612908243900D37A1B /* Apps */,
 				6590355C290823EC00D37A1B /* Protocols */,
 				659035622908245A00D37A1B /* Sample */,
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653865BC2909734100A5BC3A /* BindingSubject.swift in Sources */,
 				659035682908297600D37A1B /* SampleViewModel.swift in Sources */,
 				659035662908248A00D37A1B /* SampleView.swift in Sources */,
 				659035602908242100D37A1B /* ViewModelType.swift in Sources */,
